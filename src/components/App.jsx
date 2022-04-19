@@ -1,37 +1,38 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-import InputContainer from '../containers/InputContainer';
+import RegionsContainer from '../containers/RegionsContainer';
+import CategoriesContainer from '../containers/CategoriesContainer';
 import RestaurantContainer from '../containers/RestaurantContainer';
 
-import { setRestaurants } from '../redux/actions';
+import { loadCategories, loadRestaurants, loadRegions } from '../redux/actions';
 
 export default function App() {
   const dispatch = useDispatch();
 
+  const { regionName } = useSelector((state) => ({
+    regionName: state.regionName,
+  }));
+
   useEffect(() => {
-    dispatch(setRestaurants({
-      restaurants: [{
-        id: 1,
-        name: '두향',
-        category: '한식',
-        address: '성남시 분당구',
-      },
-      {
-        id: 2,
-        name: '맥도날드',
-        category: '양식',
-        address: '서울시 강남구',
-      },
-      ],
-    }));
+    dispatch(loadRegions());
+    dispatch(loadCategories());
+    dispatch(loadRestaurants());
   }, []);
 
   return (
     <>
       <h1>Restaurants</h1>
+      <RegionsContainer />
+      <CategoriesContainer />
+      <br />
       <RestaurantContainer />
-      <InputContainer />
+
+      <div>
+        지역 :
+        {' '}
+        {regionName}
+      </div>
     </>
   );
 }

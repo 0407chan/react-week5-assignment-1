@@ -2,12 +2,12 @@
 import {
   addRestaurant,
   deleteRestaurant, updateAddress, updateCategory,
-  updateName, setRestaurants
+  updateName, setRestaurants, setCategories, setRegions
 } from './actions';
 import reducer from './reducer';
 
 describe('reducer', () => {
-  context('with action.type', () => {
+  context('with action type', () => {
     it('updates name', () => {
       const state = reducer({
         state: {
@@ -213,9 +213,75 @@ describe('reducer', () => {
         expect(state.restaurants).toHaveLength(0);
       });
     });
+
+    describe('setCategories', () => {
+      function reduceSetCategories({ categories }) {
+        return reducer({
+          state: {
+            categories: [{
+              id: 1,
+              name: '한식',
+            }],
+          },
+          action: setCategories({ categories }),
+        });
+      }
+
+      it('sets categories with new categories', () => {
+        const state = reduceSetCategories({
+          categories: [{
+            id: 5,
+            name: '중식',
+          }]
+        });
+
+        expect(state.categories).toHaveLength(1);
+      });
+
+      it('sets categories with empty array', () => {
+        const state = reduceSetCategories({
+          categories: []
+        });
+
+        expect(state.categories).toHaveLength(0);
+      });
+    });
+
+    describe('setRegions', () => {
+      function reduceSetRegions({ regions }) {
+        return reducer({
+          state: {
+            regions: [{
+              id: 1,
+              name: '서울',
+            }],
+          },
+          action: setRegions({ regions }),
+        });
+      }
+
+      it('sets regions with new regions', () => {
+        const state = reduceSetRegions({
+          regions: [{
+            id: 5,
+            name: '부산',
+          }]
+        });
+
+        expect(state.regions).toHaveLength(1);
+      });
+
+      it('sets regions with empty array', () => {
+        const state = reduceSetRegions({
+          regions: []
+        });
+
+        expect(state.regions).toHaveLength(0);
+      });
+    });
   });
 
-  context('without action.type', () => {
+  context('without action type', () => {
     function otherFunction({ id }) {
       return {
         type: 'otherFunction',
