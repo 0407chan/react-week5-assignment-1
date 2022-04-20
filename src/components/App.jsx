@@ -10,29 +10,26 @@ import { loadCategories, loadRestaurants, loadRegions } from '../redux/actions';
 export default function App() {
   const dispatch = useDispatch();
 
-  const { regionName } = useSelector((state) => ({
+  const { regionName, categoryId } = useSelector((state) => ({
     regionName: state.regionName,
+    categoryId: state.categoryId,
   }));
 
   useEffect(() => {
     dispatch(loadRegions());
     dispatch(loadCategories());
-    dispatch(loadRestaurants());
   }, []);
+
+  useEffect(() => {
+    dispatch(loadRestaurants({ regionName, categoryId }));
+  }, [regionName, categoryId]);
 
   return (
     <>
       <h1>Restaurants</h1>
       <RegionsContainer />
       <CategoriesContainer />
-      <br />
       <RestaurantContainer />
-
-      <div>
-        지역 :
-        {' '}
-        {regionName}
-      </div>
     </>
   );
 }
