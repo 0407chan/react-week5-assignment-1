@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1650466668856" clover="3.2.0">
-  <project timestamp="1650466668856" name="All files">
-    <metrics statements="74" coveredstatements="74" conditionals="23" coveredconditionals="23" methods="32" coveredmethods="32" elements="129" coveredelements="129" complexity="0" loc="74" ncloc="74" packages="5" files="12" classes="12"/>
+<coverage generated="1650551763366" clover="3.2.0">
+  <project timestamp="1650551763366" name="All files">
+    <metrics statements="76" coveredstatements="76" conditionals="23" coveredconditionals="23" methods="34" coveredmethods="34" elements="133" coveredelements="133" complexity="0" loc="76" ncloc="76" packages="5" files="13" classes="13"/>
     <package name="components">
-      <metrics statements="15" coveredstatements="15" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="8"/>
+      <metrics statements="17" coveredstatements="17" conditionals="8" coveredconditionals="8" methods="10" coveredmethods="10"/>
       <file name="App.jsx" path="/Users/chanho/Desktop/chris/codesoom/react-week5-assignment-1/src/components/App.jsx">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="11" count="4" type="stmt"/>
@@ -15,13 +15,18 @@
         <line num="24" count="4" type="stmt"/>
         <line num="27" count="4" type="stmt"/>
       </file>
-      <file name="Buttons.jsx" path="/Users/chanho/Desktop/chris/codesoom/react-week5-assignment-1/src/components/Buttons.jsx">
-        <metrics statements="5" coveredstatements="5" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
-        <line num="5" count="24" type="cond" truecount="4" falsecount="0"/>
-        <line num="6" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="18" type="stmt"/>
-        <line num="12" count="36" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
+      <file name="Button.jsx" path="/Users/chanho/Desktop/chris/codesoom/react-week5-assignment-1/src/components/Button.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="7" count="35" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+      </file>
+      <file name="List.jsx" path="/Users/chanho/Desktop/chris/codesoom/react-week5-assignment-1/src/components/List.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="7" count="21" type="cond" truecount="4" falsecount="0"/>
+        <line num="8" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="16" type="stmt"/>
+        <line num="14" count="32" type="stmt"/>
+        <line num="17" count="32" type="stmt"/>
       </file>
       <file name="Restaurant.jsx" path="/Users/chanho/Desktop/chris/codesoom/react-week5-assignment-1/src/components/Restaurant.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -58,7 +63,7 @@
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="categories.js" path="/Users/chanho/Desktop/chris/codesoom/react-week5-assignment-1/src/fixtures/categories.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
       </file>
       <file name="regions.js" path="/Users/chanho/Desktop/chris/codesoom/react-week5-assignment-1/src/fixtures/regions.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -78,7 +83,7 @@
         <line num="17" count="5" type="stmt"/>
         <line num="24" count="5" type="stmt"/>
         <line num="31" count="5" type="stmt"/>
-        <line num="39" count="6" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
         <line num="47" count="5" type="stmt"/>
